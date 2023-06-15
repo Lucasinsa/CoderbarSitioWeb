@@ -322,10 +322,19 @@ a {
   
 .sucursalItem p {
     color: #555;
+    text-align: center;
+}
+
+.sucursalItem ul {
+    border-radius: 10px;
+    background-color: #333;
+    justify-content: space-around;
+    margin: 15px 0;
 }
 
 .sucursalItem ul li p {
-    margin-right:40px;
+    color: white;
+    margin-bottom: 0;
 }
 
 .sucursalItem a {
@@ -346,12 +355,12 @@ a {
 .sucursalItem img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    height: 200px;
 }
   
 .sucursalItem i {
-    margin-left: 20px;
-    color: #333;
+    color: white;
 }
 
 .container-icono{
