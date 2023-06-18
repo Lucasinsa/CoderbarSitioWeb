@@ -158,7 +158,7 @@ a {
     cursor: pointer;
 }
 
-
+/*Contenido comienza desde los 72px*/
 .content {
     margin-top: 72px;
     min-height: calc(100vh - 72px);
@@ -169,9 +169,94 @@ a {
     padding-bottom: 100px;
 }
 
-/* ------------------------- */
-/* Contenido (INICIO) */
-/* ------------------------- */
+/*Card personalizada*/
+.cardItem {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+}
+  
+.cardItem h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+}
+  
+.cardItem p {
+    color: #555;
+    text-align: center;
+}
+
+.cardItem ul {
+    border-radius: 10px;
+    background-color: #333;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.cardItem ul li p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.cardItem a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.cardItem a:hover {
+    background-color: orangered;
+}
+  
+.cardItem i {
+    color: white;
+}
+
+.container-icono, .boton-card {
+    text-align: center;
+}
+
+.separacion-iconos{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.zoom-foto{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 200px;
+}
+  
+  .zoom-foto img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+  
+.zoom-foto img:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+}
+
+/* ------------------------------------------------*/
+/* Contenido INICIO (Dispositivos ≥992px y <992px) */
+/* ------------------------------------------------*/
 
 #main__index {
 	display: flex;
@@ -185,6 +270,7 @@ a {
     justify-content: center;
 	color: #fff;
     padding-top: 100px;
+    margin: 0 70px;
 }
 
 .icono {
@@ -197,53 +283,128 @@ a {
     font-size: 50px;
 }
 
-/* ------------------------- */
-/* Contenido (NUESTRA HISTORIA) */
-/* ------------------------- */
-
-#main__nuestra-historia {
-    width: 45vw;
-    margin-left: 5%;
-    margin-top: 5%;
+/* --------------------------------------------------*/
+/* Contenido INICIO (Dispositivos < 992px)           */
+/* --------------------------------------------------*/
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: 575px){
+    .titulo{
+        font-size: 35px;
+    }
 }
 
-.fotosHistoria {
-    width: 45vw;
+/* -------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos ≥992px) */
+/* -------------------------------------------------*/
+
+.titulo-historia {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.contenedor-p-carousel {
+    padding: 25px;
+    background-color: black;
+    border: 1px solid orangered;
+    border-radius: 5px;
+}
+
+.contenedor-flex-p-carousel{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-around;
 }
 
-#main__nuestra-historia h1 {
-    margin-top: 30px;
-    display: inline-block;
-    padding-left: 30px;
+.contenedor-flex-p-carousel p{
+    background-color:orangered;
+    padding: 20px;
+    width: 426px;
+    margin-bottom: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
 }
 
-
-#main__nuestra-historia p {
-    margin-top: 50px;
-    padding: 30px;
-    font-weight: 400;
-    width: auto;
-    border-radius: 10%;
-}
-
-.fotosHistoria div {
-    margin-top: 55px;
-    max-width: 400px; 
-    max-height: 400px;
-    justify-content: center;
-    align-items: center;
-}
-
-.fotosHistoria div img {
+.medida-carousel {
     width: 400px;
     height: 400px;
-    align-self: center;
-    align-items: center;
-    border: orangered double 20px;
-    border-radius: 100%;
+}
+
+.borde-carousel {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.carousel img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* --------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos < 992px) */
+/* --------------------------------------------------*/
+
+/*Dispositivos s y md (Small y Medium)*/
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .contenedor-flex-p-carousel {
+        flex-direction: column;
+    }
+
+    .contenedor-flex-p-carousel p {
+        max-width: 500px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }   
+
+    .medida-carousel {
+        width: 426px;
+        height: 300px;
+    }
+
+    .borde-carousel {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+
+    .carousel img {
+        width: 426px;
+        height: 300px;
+    }
+}
+
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: 575px){
+    .contenedor-flex-p-carousel {
+        flex-direction: column;
+    }
+
+    .contenedor-flex-p-carousel p {
+        max-width: 300px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }   
+
+    .medida-carousel {
+        width: 300px;
+        height: 250px;
+    }
+
+    .borde-carousel {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+
+    .carousel img {
+        width: 300px;
+        height: 250px;
+    }
 }
 
 /* ------------------------- */
@@ -291,89 +452,21 @@ a {
 #main__sucursales h1 {
     text-align: center;
     color: orangered;
-    margin: 30px;
+    margin: 50px;
 }
 
 /*Lista de sucursales (Responsive por flex-wrap)*/
-.listaSucursales ul {
+.listaSucursales > ul {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-  
-/*Card de cada sucursal*/
-.sucursalItem {
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    max-width: 300px;
-}
-  
-.sucursalItem h2 {
-    font-weight: 700;
-    font-size: 24px;
-    color: #333;
-    margin-top: 0;
-    text-align: center;
-}
-  
-.sucursalItem p {
-    color: #555;
-    text-align: center;
-}
 
-.sucursalItem ul {
-    border-radius: 10px;
-    background-color: #333;
-    justify-content: space-around;
-    margin: 15px 0;
-}
-
-.sucursalItem ul li p {
-    color: white;
-    margin-bottom: 0;
-}
-
-.sucursalItem a {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: black;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-  
-.sucursalItem a:hover {
-    background-color: #555;
-}
-  
-.sucursalItem img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    height: 200px;
-}
-  
-.sucursalItem i {
-    color: white;
-}
-
-.container-icono{
-    text-align: center;
-}
-
-.boton-pedidos {
-    text-align: center;
-}
-
-/* ------------------------- */
-/* Contenido (SHOWS) */
-/* ------------------------- */
+/* -------------------------------------*/
+/* Contenido SHOWS (Dispositivos ≥992px)*/
+/* -------------------------------------*/
 
 #main__shows {
     text-align: center;
@@ -381,41 +474,62 @@ a {
 
 
 #main__shows h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px;
 }
 
 
 .presentacionShows {
-    margin-bottom: 30px;
-}
-        
-.listaShows {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-        
-.listaShows li {
-    width: calc(33.33% - 20px); /* Ajustamos el ancho para mostrar tres elementos por línea */
-    margin-bottom: 20px;
-    text-align: center;
-}
-        
-.listaShows img {
-    max-width: 100%;
-    height: auto;
+    margin-bottom: 50px;
 }
 
-/* ------------------------- */
-/* Contenido (CONTACTO) */
-/* ------------------------- */
+.presentacionShows p{
+    padding: 25px;
+    background-color: black;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+  
+.listaShows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    padding: 0;
+    row-gap: 50px;
+}
+
+/* --------------------------------------*/
+/* Contenido SHOWS (Dispositivos < 992px)*/
+/* --------------------------------------*/
+
+/*Dispositivos md (Medium)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .listaShows {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .centrarCard {
+        grid-column: span 2;
+    }
+}
+
+/*Dispositivos xs y s (extra small y small)*/
+@media (max-width: 767px){
+    .listaShows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --------------------------------------------------*/
+/* Contenido CONTACTO (Dispositivos ≥992px y <992px) */
+/* --------------------------------------------------*/
 
 #main__contacto {
     margin-top: 40px;
+    margin: 40px 15px 0 15px;
     max-width: 600px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
@@ -427,6 +541,7 @@ a {
     color: orangered;
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
   
 #main__contacto p {
@@ -453,7 +568,8 @@ textarea {
 }
   
 input[type="submit"] {
-    background-color: #333;
+    background-color: black;
+    border-radius: 5px;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -462,12 +578,13 @@ input[type="submit"] {
   }
   
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: orangered;
 }
   
 a button {
     margin-top: 30px;
-    background-color: #333;
+    background-color: black;
+    border-radius: 5px;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -477,7 +594,7 @@ a button {
 }
   
 a button:hover {
-    background-color: #555;
+    background-color: orangered;
 }
 
 hr {
@@ -489,9 +606,9 @@ hr {
     color: #333;
 }
 
-/* ------------------------- */
-/* Footer */
-/* ------------------------- */
+/* --------------------------------------*/
+/* Footer (Dispositivos ≥992px y <992px) */
+/* --------------------------------------*/
 
 footer {
     background-color: #111;
