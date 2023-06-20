@@ -13,62 +13,91 @@
         una experiencia única a nuestros clientes.">
         <title>Nuestra historia | Coderbar</title>
         <link rel="shortcut icon" href=".././images/favicon.png">
-        <!--Script para usar iconos de Fontawesome-->
-        <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
         <!--Fuente Open Sans-->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <!--Enlace con Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <!--Enlace con CSS-->
         <link href=".././css/style.css" rel="stylesheet">
     </head>
     <body>
         <!--Inicio de header + nav-->
-        <header>
-            <!--Logo del sitio-->
-            <div class="logo">
-                <img src=".././images/favicon.png" alt="Logo de Coderbar"> 
-            </div>
-            <!--Inicio nav-->
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="nuestra-historia.html">NUESTRA HISTORIA</a></li>
-                    <li><a href="comidas.html">COMIDAS</a></li>
-                    <li><a href="sucursales.html">SUCURSALES</a></li>
-                    <li><a href="shows.html">SHOWS</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
+        <header id="menu">
+            <nav class="navbar navbar-expand-lg fixed-top nav-background nav-height no-margin-padding">
+              <div class="container-fluid">
+                <a class="navbar-brand mx-4" href="../index.html">
+                  <img src=".././images/favicon.png" alt="Logo de Coderbar">
+                </a>
+                <button class="navbar-toggler borde-boton mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon imagen-barras"></span>
+                </button>
+                <div class="collapse margen-responsive-navbar navbar-collapse menu-color myp-personalizado" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pagina-actual" href="nuestra-historia.html">NUESTRA HISTORIA</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="comidas.html">COMIDAS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="sucursales.html">SUCURSALES</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="shows.html">SHOWS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">CONTACTO</a>
+                    </li>
+                  </ul>
+                  <div class="redes d-flex justify-content-center margen-responsive-redes">
+                    <a href="https://instagram.com" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
             </nav>
-            <!--Cierre nav-->
-            <div class="redes">
-                <a href="https://instagram.com" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://twitter.com" class="twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            </div>
         </header>
         <!--Cierre de header + nav-->
         <!--Inicio del contenido principal de la página-->
         <div class="content">
-            <main id="main__nuestra-historia">
-                <h1>NUESTRA HISTORIA</h1>
-                    <p>
-                        Nacimos en el 2010 en Almagro, provenientes de una extensa tradición gastronómica familiar. En un comienzo, nos avocamos a comida casera y café de alta gama; construyendo nuestro propio ADN. En ese camino, nos obsesionamos con los tragos perfectos, y haciendo pruebas, lentamente empezamos a testear los productos.<br>
-                        El impacto de la gente fue inmediato. Fascinados con la experiencia, se lanzaron a recomendar nuestras comidas y bebidas de boca a boca. Ese enorme fervor y entusiasmo que la propia presión de los clientes transformó, hizo de Coderbar un centro de culto para los fanáticos de la combinación ambiente-menú.
-                    </p>
-            </main>
-            <section class="fotosHistoria">
-                <!--Uso una sola imagen hasta poder aplicar Carrousel de Imagenes-->
-                <div>
-                    <img src=".././images/nuestra-historia-1.jpg" alt="Nuestras instalaciones (1)">
-                    <!--
-                    <img src=".././images/nuestra-historia-2.jpg" alt="Nuestras instalaciones (2)">
-                    <img src=".././images/nuestra-historia-3.jpg" alt="Nuestras instalaciones (3)">
-                    <img src=".././images/nuestra-historia-4.jpg" alt="Nuestras instalaciones (4)">
-                    <img src=".././images/nuestra-historia-5.jpg" alt="Nuestras instalaciones (5)">
-                    -->
+          <main id="main__nuestra-historia">
+            <div class="titulo-historia">
+              <h1>NUESTRA HISTORIA</h1>
+            </div>
+            <div class="contenedor-p-carousel">
+              <div class="contenedor-flex-p-carousel">
+                <p>
+                  Nacimos en el 2010 en Almagro, provenientes de una extensa tradición gastronómica familiar. En un comienzo, nos avocamos a comida casera y café de alta gama; construyendo nuestro propio ADN. En ese camino, nos obsesionamos con los tragos perfectos, y haciendo pruebas, lentamente empezamos a testear los productos.<br>
+                  El impacto de la gente fue inmediato. Fascinados con la experiencia, se lanzaron a recomendar nuestras comidas y bebidas de boca a boca. Ese enorme fervor y entusiasmo que la propia presión de los clientes transformó, hizo de Coderbar un centro de culto para los fanáticos de la combinación ambiente-menú.
+                </p>
+                <div id="carouselExampleSlidesOnly" class="carousel medida-carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner borde-carousel">
+                    <div class="carousel-item active" data-bs-interval="300">
+                      <img src=".././images/nuestra-historia-1.jpg" class="d-block w-100" alt="Foto lugar (1)">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="300">
+                      <img src=".././images/nuestra-historia-2.jpg" class="d-block w-100" alt="Foto lugar (2)">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="300">
+                      <img src=".././images/nuestra-historia-3.jpg" class="d-block w-100" alt="Foto lugar (3)">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="300">
+                      <img src=".././images/nuestra-historia-4.jpg" class="d-block w-100" alt="Foto lugar (4)">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="300">
+                      <img src=".././images/nuestra-historia-5.jpg" class="d-block w-100" alt="Foto lugar (5)">
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>
+          </main>
         </div>
         <!--Cierre del contenido principal de la página-->
-        <!-- Site footer -->
+        <!--Inicio del Footer-->
         <footer>
             <div class="footer-content">
                 <h3>Coderbar</h3>
@@ -88,6 +117,10 @@
                 <p>Copyright &copy;2023 Coderbar. Designed by <span>Lucas Insaurralde Sousa</span></p>
             </div>
         </footer>
+        <!--Fin del Footer-->
+        <!--Script para usar iconos de Fontawesome-->
+        <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
+        <!--Script de Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>
-

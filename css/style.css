@@ -1,6 +1,7 @@
-/* ------------------------- */
-/* Reseteo y css general */
-/* ------------------------- */
+/* --------------------------*/
+/* Reseteo y css general     */
+/* --------------------------*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,70 +11,115 @@
     color: white;
 }
 
-/* ------------------------- */
-/* Header y nav de las páginas */
-/* ------------------------- */
+/* -------------------------------------*/
+/* Header y nav  (Dispositivos ≥992px)  */
+/* -------------------------------------*/
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 72px;
-    z-index: 9999; /* Asegura que la barra de navegación esté por encima de otros elementos */
+/*Navbar*/
+.nav-background, .menu-color {
     background-color: black;
-    padding: 5px 3%;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-header .logo {
-    cursor: pointer;
+.nav-height {
+    height: 72px;
 }
 
-header .logo img {
-    height: 56px;
-    width: 50px;
-    transition: all 0.3s;
-}
-
-header .logo img:hover {
-    transform: scale(1.1);
-}
-
-nav .nav-links {
-    list-style: none;
-}
-
-nav .nav-links li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-nav .nav-links li a {
-    color: white;
-    text-decoration: none;
-}
-
-nav .nav-links li a:hover {
-    transform: scale(1.1);
-    color:orangered;
-}
-
-.instagram i {
-    color: white;
-    margin-right: 20px;
-}
-
-.twitter i {
-    color: white;
-}
-
-.redes i:hover {
+#pagina-actual {
     color: orangered;
+    text-decoration: underline;
+}
+
+/*Logo*/
+.navbar-brand img {
+    width: 50px;
+    height: 56px;
+}
+
+/*Redes*/
+.redes .instagram {
+    margin: 0 1.5rem;
+}
+
+.redes .twitter {
+    margin-right: 1.5rem; 
+}
+
+
+.nav-item .nav-link{
+    color: white;
+}
+
+/*Hover*/
+.navbar-brand img:hover {
     transform: scale(1.1);
+
+}
+
+.nav-item .nav-link:hover, .redes a i:hover { 
+    color: orangered;
+}
+
+/* -------------------------------------*/
+/* Header y nav  (Dispositivos < 992px) */
+/* -------------------------------------*/
+
+@media (max-width: 991px){
+    /*Botón menú*/
+    .imagen-barras {
+        background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+    }
+    
+    .borde-boton {
+        border: 1px solid white;
+    }
+
+    /*Navbar y menú*/
+    .nav-height {
+        height: auto;
+    }
+
+    .menu-color {
+        background-color: orangered;
+    }
+
+    .myp-personalizado {
+        margin-top: 0.5rem;
+        padding-top: 20px;
+    }
+
+    .margen-responsive-redes { 
+        margin-top: 30px;
+        padding: 10px;
+        background-color: black;
+    }
+
+    .no-margin-padding {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .margen-responsive-navbar {
+        margin: 20px 20px 0px 20px;
+    }
+
+    .redes .twitter {
+        margin-left: 1.5rem; 
+    }
+    
+    /*Hover*/
+    #pagina-actual {
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-item .nav-link:hover {
+        color: black;
+    }
+
+    .borde-boton:active {
+        border: 1px solid orangered;
+        background-color: orangered;
+    }
 }
 
 /* -------------------------------------------- */
@@ -81,16 +127,14 @@ nav .nav-links li a:hover {
 /* -------------------------------------------- */
 
 h1 {
+    font-size: 32px;
+    font-weight: 700;
     color: orangered;
 }
 
 h2 {
+    font-size: 24px;
     color: orangered;
-}
-
-img {
-    width: 200px;
-    height: 200px;
 }
 
 ul {
@@ -100,14 +144,94 @@ ul {
 a {
     text-decoration: none;
 }
-.orangeButton {
-    margin-top: 30px;
-    display: inline-block;
-    padding: 15px;
-    background-color: orangered;
-    cursor: pointer;
+
+/*Zoom al hacer hover sobre fotos*/
+.zoom-foto{
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 200px;
+}
+  
+  .zoom-foto img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+  
+.zoom-foto img:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
 }
 
+/*Card personalizada*/
+.cardItem {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+}
+  
+.cardItem h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+}
+  
+.cardItem p {
+    color: #555;
+    text-align: center;
+}
+
+.cardItem ul {
+    border-radius: 10px;
+    background-color: #333;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.cardItem ul li p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.cardItem a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.cardItem a:hover {
+    background-color: orangered;
+}
+  
+.cardItem i {
+    color: white;
+}
+
+.container-icono, .boton-card {
+    text-align: center;
+}
+
+.separacion-iconos{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*Contenido comienza desde los 72px*/
 .content {
     margin-top: 72px;
     min-height: calc(100vh - 72px);
@@ -118,9 +242,9 @@ a {
     padding-bottom: 100px;
 }
 
-/* ------------------------- */
-/* Contenido (INICIO) */
-/* ------------------------- */
+/* ------------------------------------------------*/
+/* Contenido INICIO (Dispositivos ≥992px y <992px) */
+/* ------------------------------------------------*/
 
 #main__index {
 	display: flex;
@@ -134,6 +258,7 @@ a {
     justify-content: center;
 	color: #fff;
     padding-top: 100px;
+    margin: 0 70px;
 }
 
 .icono {
@@ -146,203 +271,348 @@ a {
     font-size: 50px;
 }
 
-/* ------------------------- */
-/* Contenido (NUESTRA HISTORIA) */
-/* ------------------------- */
+/* --------------------------------------------------*/
+/* Contenido INICIO (Dispositivos < 992px)           */
+/* --------------------------------------------------*/
 
-#main__nuestra-historia {
-    width: 45vw;
-    margin-left: 5%;
-    margin-top: 5%;
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: 575px){
+
+    .titulo{
+        font-size: 35px;
+    }
 }
 
-.fotosHistoria {
-    width: 45vw;
+/* -------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos ≥992px) */
+/* -------------------------------------------------*/
+
+.titulo-historia {
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.contenedor-p-carousel {
+    padding: 25px;
+    background-color: black;
+    border: 1px solid orangered;
+    border-radius: 5px;
+}
+
+.contenedor-flex-p-carousel{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-around;
 }
 
-#main__nuestra-historia h1 {
-    margin-top: 30px;
-    display: inline-block;
-    padding-left: 30px;
+.contenedor-flex-p-carousel p{
+    background-color:orangered;
+    padding: 20px;
+    width: 426px;
+    margin-bottom: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
 }
 
-
-#main__nuestra-historia p {
-    margin-top: 50px;
-    padding: 30px;
-    font-weight: 400;
-    width: auto;
-    border-radius: 10%;
-}
-
-.fotosHistoria div {
-    margin-top: 55px;
-    max-width: 400px; 
-    max-height: 400px;
-    justify-content: center;
-    align-items: center;
-}
-
-.fotosHistoria div img {
+.medida-carousel {
     width: 400px;
     height: 400px;
-    align-self: center;
-    align-items: center;
-    border: orangered double 20px;
-    border-radius: 100%;
 }
 
-/* ------------------------- */
-/* Contenido (COMIDAS) */
-/* ------------------------- */
-#main__comidas {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.borde-carousel {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-#main__comidas section p {
-    font-weight: 400;
-}
-
-#main__comidas h1 {
-    margin-top: 25px;
-    display: inline-block;
-} 
-
-#main__comidas section p {
-    margin-top: 25px;
-    display: inline-block;
+.carousel img{
     width: 400px;
-    margin-bottom: 40px;
+    height: 400px;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-.fotosComidas {
-    display: flex;
-    justify-content: space-evenly;
+/* --------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos < 992px) */
+/* --------------------------------------------------*/
 
+/*Dispositivos s y md (Small y Medium)*/
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .contenedor-flex-p-carousel {
+        flex-direction: column;
+    }
+
+    .contenedor-flex-p-carousel p {
+        max-width: 500px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }   
+
+    .medida-carousel {
+        width: 426px;
+        height: 300px;
+    }
+
+    .borde-carousel {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+
+    .carousel img {
+        width: 426px;
+        height: 300px;
+    }
 }
 
-.fotosComidas li {
-    margin-left: 30px;
-    margin-right: 30px;
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: 575px){
+    .contenedor-flex-p-carousel {
+        flex-direction: column;
+    }
+
+    .contenedor-flex-p-carousel p {
+        max-width: 300px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }   
+
+    .medida-carousel {
+        width: 300px;
+        height: 250px;
+    }
+
+    .borde-carousel {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+
+    .carousel img {
+        width: 300px;
+        height: 250px;
+    }
 }
 
-/* ------------------------- */
-/* Contenido (SUCURSALES) */
-/* ------------------------- */ 
-#main__sucursales h1 {
+/* ---------------------------------------*/
+/* Contenido COMIDAS (Dispositivos ≥992px)*/
+/* ---------------------------------------*/
+
+/*Título y presentación*/
+.presentacion-comidas h1 {
     text-align: center;
-    color: orangered;
-    font-size: 32px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-.listaSucursales ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-.sucursalItem {
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-.sucursalItem h2 {
-    font-size: 24px;
-    color: #333;
-    margin-top: 0;
-}
-  
-.sucursalItem p {
-    color: #555;
+    margin: 40px;
 }
 
-.sucursalItem ul li p {
-    margin-right:40px;
+.presentacion-comidas p {
+    text-align: center;
+    margin: 40px;
+    padding: 25px;
+    background-color: black;
+    border: 1px solid orangered;
+    border-radius: 5px;
+
 }
-  
-.sucursalItem a {
-    display: inline-block;
+
+/*Menú de comidas*/
+.menu-comidas {
+    margin: 0 40px;
+}
+
+.popular-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 150px;
+    padding: 0;
+}
+
+.popular-card {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 330px;
+}
+
+.card-img {
+    height: 100%;
+}
+
+.card-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.popular-card .card-content {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.card-content .card-rating {
+    background: orangered;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: auto;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.card-content p { 
+    color: black;
+    margin: 0;
+    font-weight: 700;
+}
+
+.popular-list {
+    margin: 0;
+    padding-left: 0;
+}
+
+/*Botón para ver todo el menú*/
+.boton-menu {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-menu a {
     margin-top: 10px;
-    background-color: #333;
+    background-color: black;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-  
-.sucursalItem a:hover {
-    background-color: #555;
-}
-  
-.sucursalItem img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-  
-.sucursalItem i {
-    margin-left: 20px;
-    color: #333;
+
+.boton-menu a:hover {
+    background-color: orangered;
 }
 
-/* ------------------------- */
-/* Contenido (SHOWS) */
-/* ------------------------- */
+/* --------------------------------------*/
+/* Contenido COMIDAS (Dispositivos < 992px)*/
+/* --------------------------------------*/
+
+/*Dispositivos md (Medium)*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .popular-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .last-popular-list {
+        grid-column: span 2;
+    }
+}
+
+/*Dispositivos xs y s (extra small y small)*/
+@media (max-width: 767px) {
+
+    .popular-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -----------------------------------------------------*/
+/* Contenido SUCURSALES (Dispositivos ≥992px y <992px)  */
+/* -----------------------------------------------------*/ 
+
+/*Título*/
+#main__sucursales h1 {
+    text-align: center;
+    color: orangered;
+    margin: 50px;
+}
+
+/*Lista de sucursales (Responsive por flex-wrap)*/
+.listaSucursales > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* -------------------------------------*/
+/* Contenido SHOWS (Dispositivos ≥992px)*/
+/* -------------------------------------*/
+
 #main__shows {
     text-align: center;
 }
 
 
 #main__shows h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px;
 }
 
 
 .presentacionShows {
-    margin-bottom: 30px;
-}
-        
-.listaShows {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-        
-.listaShows li {
-    width: calc(33.33% - 20px); /* Ajustamos el ancho para mostrar tres elementos por línea */
-    margin-bottom: 20px;
-    text-align: center;
-}
-        
-.listaShows img {
-    max-width: 100%;
-    height: auto;
+    margin-bottom: 50px;
 }
 
-/* ------------------------- */
-/* Contenido (CONTACTO) */
-/* ------------------------- */
+.presentacionShows p{
+    padding: 25px;
+    background-color: black;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+  
+.listaShows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    padding: 0;
+    row-gap: 50px;
+}
+
+/* --------------------------------------*/
+/* Contenido SHOWS (Dispositivos < 992px)*/
+/* --------------------------------------*/
+
+/*Dispositivos md (Medium)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .listaShows {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .centrarCard {
+        grid-column: span 2;
+    }
+}
+
+/*Dispositivos xs y s (extra small y small)*/
+@media (max-width: 767px){
+    .listaShows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --------------------------------------------------*/
+/* Contenido CONTACTO (Dispositivos ≥992px y <992px) */
+/* --------------------------------------------------*/
 
 #main__contacto {
     margin-top: 40px;
+    margin: 40px 15px 0 15px;
     max-width: 600px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
@@ -354,6 +624,7 @@ a {
     color: orangered;
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
   
 #main__contacto p {
@@ -380,7 +651,8 @@ textarea {
 }
   
 input[type="submit"] {
-    background-color: #333;
+    background-color: black;
+    border-radius: 5px;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -389,12 +661,13 @@ input[type="submit"] {
   }
   
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: orangered;
 }
   
 a button {
     margin-top: 30px;
-    background-color: #333;
+    background-color: black;
+    border-radius: 5px;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -404,7 +677,7 @@ a button {
 }
   
 a button:hover {
-    background-color: #555;
+    background-color: orangered;
 }
 
 hr {
@@ -416,9 +689,10 @@ hr {
     color: #333;
 }
 
-/* ------------------------- */
-/* Footer */
-/* ------------------------- */
+/* --------------------------------------*/
+/* Footer (Dispositivos ≥992px y <992px) */
+/* --------------------------------------*/
+
 footer {
     background-color: #111;
     padding-top: 40px;
@@ -441,7 +715,7 @@ footer {
 
 .footer-content p {
     max-width: 500px;
-    margin: 10px auto;
+    margin: 0 30px;
     line-height: 28px;
     font-size: 14px;
 }
@@ -452,6 +726,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
+    padding: 0;
 }
 
 .socials li {
@@ -478,7 +753,9 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
 .footer-bottom p {
+    margin: 0 30px;
     font-size: 14px;
     word-spacing: 2px;
 }
@@ -489,9 +766,10 @@ footer {
     font-weight: 200;
 }
 
-/* ------------------------- */
-/* Barra de scrolleo */
-/* ------------------------- */
+/* ------------------------------*/
+/* Barra de scrolleo y selección */
+/* ------------------------------*/
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -502,4 +780,9 @@ footer {
 
 ::-webkit-scrollbar-thumb {
     background-color: orangered;
+}
+
+::selection {
+    background-color: orangered;
+    color: white;
 }
