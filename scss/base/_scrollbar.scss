@@ -1,0 +1,42 @@
+/* ------------------------------*/
+/* Barra de scrolleo y selección */
+/* ------------------------------*/
+
+/*Navegadores webkit*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orangered;
+}
+
+::selection {
+    background-color: orangered;
+    color: white;
+}
+
+/*Mozilla Firefox*/
+::-moz-scrollbar-track {
+    background: black;
+}
+  
+::-moz-scrollbar-thumb {
+    background-color: orangered;
+}
+
+::selection {
+    background-color: orangered;
+    color: white;
+}
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,9 @@
+//Font-size personalizable
+@mixin fSize($size) {
+    font-size: $size;
+}
+
+//Borde con color personalizable
+@mixin borde($colorBorde) {
+    border: 1px solid $colorBorde;
+}
