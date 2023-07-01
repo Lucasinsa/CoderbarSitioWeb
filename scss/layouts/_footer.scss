@@ -34,20 +34,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
-    padding: 0;
-    li {
-        margin: 0 10px;
+    margin: 3rem;
+    padding: 10px;
+    background-color: $color-gray-darker;
+    border-radius: 5px;
+    li:not(:last-child) {
+        margin-right: 30px;
     }
     a {
         text-decoration: none;
         color: $color-text;
         i {
             font-size: 1.1rem;
+            margin-right: 8px;
         }
-        &:hover {
+        &:hover{
+            color: $color-secondary;
             i {
                 color: $color-secondary;
+
             }
         }
     }
@@ -65,7 +70,38 @@ footer {
     }
     span {
         text-transform: uppercase;
-        opacity: .4;
-        font-weight: 200;
+        opacity: .7;
+        font-weight: $font-weight-normal;
+    }
+}
+
+/* --------------------------------------*/
+/* Footer (Dispositivos < 576px)         */
+/* --------------------------------------*/
+
+/*Dispositivos s (small)*/
+@media (max-width: calc((map-get($breakpoints,sm)) - 1px)) {
+    .socials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+        padding: 20px;
+        li {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            &:nth-child(5) {
+                grid-column: span 2;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $color-text;
+            i {
+                display: block;
+                margin-right: 0;
+            }
+        }
     }
 }
