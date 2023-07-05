@@ -2,7 +2,7 @@
 /* Contenido SUCURSALES (Dispositivos ≥992px y <992px)  */
 /* -----------------------------------------------------*/ 
 
-/*Título*/
+//Título
 #main__sucursales {
     h1 {
         text-align: center;
@@ -11,14 +11,12 @@
     }
 }
 
-/*Lista de sucursales (Responsive por flex-wrap)*/
+//Lista de sucursales (Responsive por flex-wrap)
 .listaSucursales {
     & > ul {
         list-style: none;
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include dFlex(row, wrap, center, stretch);
         span {
             display: block;
         }

@@ -2,36 +2,36 @@
 /* Barra de scrolleo y selección */
 /* ------------------------------*/
 
-/*Navegadores webkit*/
+//Navegadores webkit
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: black;
+    background: $color-principal;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: orangered;
+    background-color: $color-secondary;
 }
 
 ::selection {
-    background-color: orangered;
-    color: white;
+    background-color: $color-secondary;
+    color: $color-text;
 }
 
-/*Mozilla Firefox*/
+//Mozilla Firefox
 ::-moz-scrollbar-track {
-    background: black;
+    background: $color-principal;
 }
   
 ::-moz-scrollbar-thumb {
-    background-color: orangered;
+    background-color: $color-secondary;
 }
 
 ::selection {
-    background-color: orangered;
-    color: white;
+    background-color: $color-secondary;
+    color: $color-text;
 }
   
   

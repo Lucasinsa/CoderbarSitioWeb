@@ -3,33 +3,29 @@
 /* ------------------------------------------------*/
 
 #main__index {
-	display: flex;
-    flex-direction: column;
-	justify-content: center;
-}
+    @include dFlex(column, nowrap, center, stretch);
 
-.texto-encabezado {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-	color: $color-text;
-    padding-top: 100px;
-    margin: 0 70px;
-}
+    .texto-encabezado {
+        @include dFlex(column, nowrap, center, stretch);
+        color: $color-text;
+        padding-top: 100px;
+        margin: 0 70px;
 
-.icono {
-    font-size: 70px;
-    align-self: center;
-    animation: naranja-neon-icon 2s infinite alternate;
-}
+        .icono {
+            font-size: 70px;
+            align-self: center;
+            animation: naranja-neon-icon 2s infinite alternate;
+        }
 
-.titulo {
-    text-align: center;
-    font-size: 50px;
-    color: $color-text;
-    animation: naranja-neon-title 2s infinite alternate;
-    span {
-        display: block;
+        .titulo {
+            text-align: center;
+            font-size: 50px;
+            color: $color-text;
+            animation: naranja-neon-title 2s infinite alternate;
+            span {
+                display: block;
+            }
+        }  
     }
 }
 
@@ -39,7 +35,11 @@
 
 /*Dispositivos xs (extrasmall)*/
 @media (max-width: calc((map-get($breakpoints,sm)) - 1px)) {
-    .titulo {
-        font-size: 35px;
+    #main__index {
+        .texto-encabezado {
+            .titulo {
+                font-size: 35px;
+            }
+        }
     }
 }

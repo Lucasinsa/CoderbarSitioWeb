@@ -3,83 +3,86 @@
 /* --------------------------------------------------*/
 
 #main__contacto {
-    margin-top: 40px;
-    margin: 40px 15px 0 15px;
+    margin: $margin-titles 15px 0 15px;
     max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba($color-text, 0.9);
     border-radius: 5px;
     padding: 40px;
     text-align: center;
+
     h2 {
         color: $color-secondary;
-        font-size: 24px;
+        font-size: $font-size-h2;
         margin-bottom: 20px;
-        font-weight: 700;
+        font-weight: $font-weight-bold;
     }
-    h3 {
-        color: $color-gray-darker;
-    }
+
     p {
         color: $color-gray-lighter;
         font-size: 16px;
         line-height: 1.5;
     }
-}
-  
-form {
-    margin-top: 30px;
-}
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    color: $color-gray-lighter;
-    font-weight: $font-weight-bold;
-}
-
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-  
-input[type="submit"] {
-    background-color: $color-principal;
-    border-radius: 5px;
-    color: $color-text;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: $font-weight-bold;
-  }
-  
-
-input[type="submit"]:hover {
-    @extend %gradient-naranja;
-}
-
-a {
-    button {
+    form {
         margin-top: 30px;
-        background-color: $color-principal;
-        border-radius: 5px;
-        color: $color-text;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        text-decoration: none;
-        font-weight: $font-weight-bold;
-        &:hover {
-            @extend %gradient-naranja;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            @include borde(#ccc);
+            border-radius: 5px;
+            outline: none;
+            color: $color-gray-lighter;
+            font-weight: $font-weight-bold;
+        }
+
+        input[type="submit"] {
+            background-color: $color-principal;
+            border-radius: 5px;
+            color: $color-text;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: $font-weight-bold;
+            &:hover {
+                @extend %gradient-naranja;
+            }
+        }
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+
+    h3 {
+        color: $color-gray-darker;
+    }
+
+    a {
+        button {
+            margin-top: 30px;
+            background-color: $color-principal;
+            border-radius: 5px;
+            color: $color-text;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: $font-weight-bold;
+            &:hover {
+                @extend %gradient-naranja;
+            }
         }
     }
 }
+  
+
+
+
   

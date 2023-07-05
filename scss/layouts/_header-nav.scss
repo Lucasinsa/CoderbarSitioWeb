@@ -2,52 +2,58 @@
 /* Header y nav  (Dispositivos ≥992px)  */
 /* -------------------------------------*/
 
-/*Navbar*/
-.nav-background, .menu-color {
+//Barra de navegación
+.nav-personalizado {
     background-color: $color-principal;
-}
-
-.nav-height {
     height: 72px;
-}
 
-#pagina-actual {
-    color: $color-secondary;
-    text-decoration: underline;
-}
+    //Logo
+    .navbar-brand {
+        img {
+            width: 50px;
+            height: 56px;
+            transition: all 0.5s;
 
-/*Logo*/
-.navbar-brand {
-    img {
-        width: 50px;
-        height: 56px;
-        transition: all 0.5s;
-        &:hover {
-            transform: rotate(360deg);
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
     }
-}
 
-/*Redes*/
-.redes {
-    .instagram {
-        margin: 0 1.5rem;
-    }
-    .twitter {
-        margin-right: 1.5rem;
-    }
-    a{
-        i:hover {
+    //Menú de la barra
+    .menu-nav-personalizado {
+        background-color: $color-principal;
+
+        #pagina-actual {
             color: $color-secondary;
+            text-decoration: underline;
         }
-    }
-}
 
-.nav-item {
-    .nav-link {
-        color: $color-text;
-        &:hover {
-            color: $color-secondary;
+        .nav-item {
+            .nav-link {
+                color: $color-text;
+        
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        //Redes
+        .redes-personalizado {
+            .instagram {
+                margin: 0 1.5rem;
+            }
+
+            .twitter {
+                margin-right: 1.5rem;
+            }
+
+            a {
+                i:hover {
+                    color: $color-secondary;
+                }
+            }
         }
     }
 }
@@ -57,66 +63,54 @@
 /* -------------------------------------*/
 
 @media (max-width: calc((map-get($breakpoints,lg)) - 1px)) {
-
-    /*Botón menú*/
-    .imagen-barras {
-        background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
-    }
     
-    .borde-boton {
-        @include borde($color-text);
-    }
-
-    /*Navbar y menú*/
-    .nav-height {
+    //Barra de navegación
+    .nav-personalizado {
         height: auto;
-    }
-
-    .menu-color {
-        background-color: $color-secondary;
-    }
-
-    .myp-personalizado {
-        margin-top: 0.5rem;
-        padding-top: 20px;
-    }
-
-    .margen-responsive-redes { 
-        margin-top: 30px;
-        padding: 10px;
-        background-color: $color-principal;
-    }
-
-    .no-margin {
         margin-bottom: 0;
         padding-bottom: 8px;
-    }
 
-    .margen-responsive-navbar {
-        margin: 20px 20px 0px 20px;
-    }
+        //Botón menú
+        .boton-personalizado {
+            @include borde($color-text);
 
-    .redes {
-        .twitter {
-            margin-left: 1.5rem;
+            .imagen-barras {
+                background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+            }
+
+            &:active {
+                @include borde($color-secondary);
+                background-color: $color-secondary;
+            }
         }
-    }
-    
-    #pagina-actual {
-        color: $color-principal;
-        text-decoration: none;
-    }
 
-    /*Hover*/
-    .nav-item {
-        .nav-link:hover {
-            color: $color-principal;
+        //Menú de la barra
+        .menu-nav-personalizado {
+            margin: 0.5rem 20px 0px 20px;
+            background-color: $color-secondary;
+            padding-top: 20px;
+
+            #pagina-actual {
+                color: $color-principal;
+                text-decoration: none;
+            }
+
+            .nav-item {
+                .nav-link:hover {
+                    color: $color-principal;
+                }
+            }
         }
-    }
 
-    /*Active*/
-    .borde-boton:active {
-        @include borde($color-secondary);
-        background-color: $color-secondary;
+        //Redes
+        .redes-personalizado{
+            margin-top: 30px;
+            padding: 10px;
+            background-color: $color-principal;
+
+            .twitter {
+                margin-left: 1.5rem;
+            }
+        }
     }
 }

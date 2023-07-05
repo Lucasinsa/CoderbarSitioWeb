@@ -7,3 +7,22 @@
 @mixin borde($colorBorde) {
     border: 1px solid $colorBorde;
 }
+
+//Display flex
+@mixin dFlex($direccion, $wrap, $jusContent, $alItems) {
+    display: flex;
+    flex-direction: $direccion;
+    flex-wrap: $wrap;
+    justify-content: $jusContent;
+    align-items: $alItems;
+}
+
+//Display grid
+@mixin dGrid($columnas, $filas, $rowGap, $colGap, $jusItems) {
+    display: grid;
+    grid-template-columns: $columnas;
+    grid-template-rows: $filas;
+    row-gap: $rowGap;
+    column-gap: $colGap;
+    justify-items: $jusItems;
+}

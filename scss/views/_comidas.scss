@@ -2,12 +2,13 @@
 /* Contenido COMIDAS (Dispositivos ≥992px)*/
 /* ---------------------------------------*/
 
-/*Título y presentación*/
+//Título y presentación
 .presentacion-comidas {
     h1 {
         text-align: center;
         margin: $margin-titles;
     }
+
     p {
         text-align: center;
         margin: 40px;
@@ -18,87 +19,76 @@
     }
 }
 
-/*Menú de comidas*/
+//Menú de comidas
 .menu-comidas {
     margin: 0 40px;
-}
 
-.popular-list {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-    margin-top: 150px;
-    padding: 0;
-}
+    .popular-list {
+        @include dGrid(repeat(3,1fr), none, 30px, 30px, stretch);
+        margin: 0;
+        padding: 0;
 
-.popular-card {
-    position: relative;
-    border-radius: 25px;
-    overflow: hidden;
-    height: 330px;
-}
+        .popular-card {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            height: 330px;
 
-.card-img {
-    height: 100%;
-    img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-    }
-}
+            .card-img {
+                height: 100%;
 
-.popular-card {
-    .card-content {
-        position: absolute;
-        bottom: 10px;
-        left: 20px;
-        background: $color-text;
-        border-radius: 25px;
-        padding: 20px;
-        .card-rating {
-            background: $color-secondary;
-            color: $color-text;
-            position: absolute;
-            top: 0;
-            right: auto;
-            display: flex;
-            align-items: center;
-            gap: 1px;
-            transform: translateY(-50%);
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-size: 14px;
-            i {
-                color: $color-text;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .card-content {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                background: $color-text;
+                border-radius: 25px;
+                padding: 20px;
+
+                .card-rating {
+                    background: $color-secondary;
+                    color: $color-text;
+                    position: absolute;
+                    top: 0;
+                    right: auto;
+                    @include dFlex(row, nowrap, flex-start, center);
+                    gap: 1px;
+                    transform: translateY(-50%);
+                    padding: 6px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                }
+
+                p {
+                    color: $color-principal;
+                    margin: 0;
+                    font-weight: $font-weight-bold;
+                }
             }
         }
-        p {
-            color: $color-principal;
-            margin: 0;
-            font-weight: 700;
-        }
     }
-}
 
-.popular-list {
-    margin: 0;
-    padding-left: 0;
-}
+    .boton-menu {
+        margin-top: $margin-titles;
+        @include dFlex(row, nowrap, center, stretch);
 
-/*Botón para ver todo el menú*/
-.boton-menu {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    a {
-        margin-top: 10px;
-        background-color: $color-principal;
-        color: $color-text;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        &:hover{
-            @extend %gradient-naranja;
+        a {
+            margin-top: 10px;
+            background-color: $color-principal;
+            color: $color-text;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            &:hover{
+                @extend %gradient-naranja;
+            }
         }
     }
 }
@@ -109,18 +99,22 @@
 
 /*Dispositivos md (Medium)*/
 @media (min-width: map-get($breakpoints,md)) and (max-width: calc((map-get($breakpoints,lg)) - 1px)) {
-    .popular-list {
-        grid-template-columns: 1fr 1fr;
-    }
+    .menu-comidas {
+        .popular-list {
+            grid-template-columns: 1fr 1fr;
 
-    .last-popular-list {
-        grid-column: span 2;
+            .last-popular-list {
+                grid-column: span 2;
+            }
+        }
     }
 }
 
 /*Dispositivos xs y s (extra small y small)*/
 @media (max-width: calc((map-get($breakpoints,md)) - 1px)) {
-    .popular-list {
-        grid-template-columns: 1fr;
+    .menu-comidas {
+        .popular-list {
+            grid-template-columns: 1fr;
+        }
     }
 }

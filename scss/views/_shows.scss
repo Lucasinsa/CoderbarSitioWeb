@@ -4,29 +4,27 @@
 
 #main__shows {
     text-align: center;
+
     h1 {
         margin: $margin-titles;
     }
-}
 
-.presentacion-shows {
-    margin-bottom: 50px;
-    p {
-        padding: 25px;
-        background-color: $color-principal;
-        @include borde($color-secondary);
-        border-radius: 5px;
-        margin: 0 20px;
+    .presentacion-shows {
+        margin-bottom: 50px;
+
+        p {
+            padding: 25px;
+            background-color: $color-principal;
+            @include borde($color-secondary);
+            border-radius: 5px;
+            margin: 0 20px;
+        }
     }
-}
 
-.lista-shows {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    justify-items: center;
-    padding: 0;
-    row-gap: 50px;
+    .lista-shows {
+        @include dGrid(1fr 1fr 1fr, auto auto auto, 50px, 0, center);
+        padding: 0;
+    }
 }
 
 /* --------------------------------------*/
@@ -35,20 +33,23 @@
 
 /*Dispositivos md (Medium)*/
 @media (min-width: map-get($breakpoints,md)) and (max-width: calc((map-get($breakpoints,lg)) - 1px)) {
-    .lista-shows {
-        grid-template-columns: 1fr 1fr;
-    }
+    #main__shows {
+        .lista-shows {
+            grid-template-columns: 1fr 1fr;
 
-    .centrar-card {
-        grid-column: span 2;
+            .centrar-card {
+                grid-column: span 2;
+            }
+        }
+
     }
 }
 
 /*Dispositivos xs y s (extra small y small)*/
 @media (max-width: calc((map-get($breakpoints,md)) - 1px)) {
-    .lista-shows {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #main__shows {
+        .lista-shows {
+            @include dFlex(column, nowrap, flex-start, center);
+        }
     }
 }

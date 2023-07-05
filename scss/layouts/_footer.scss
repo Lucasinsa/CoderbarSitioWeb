@@ -2,76 +2,81 @@
 /* Footer (Dispositivos ≥992px y <992px) */
 /* --------------------------------------*/
 
-/*Footer Superior*/
+//Footer COMPLETO
 footer {
     background-color: $color-black-lighter;
     padding-top: 40px;
     color: $color-text;
-}
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    h2, h3, h4{
-        color: $color-text;
-        font-size: 1.8rem;
-        font-weight: 400;
-        line-height: 3rem;
-    }
-    p {
-        max-width: 500px;
-        margin: 0 30px;
-        line-height: 28px;
-        font-size: 14px;
-    }
-}
+    //Footer SUPERIOR
+    .footer-content {
+        @include dFlex(column, nowrap, center, center);
+        text-align: center;
 
-.socials {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3rem;
-    padding: 10px;
-    background-color: $color-gray-darker;
-    border-radius: 5px;
-    li:not(:last-child) {
-        margin-right: 30px;
-    }
-    a {
-        text-decoration: none;
-        color: $color-text;
-        i {
-            font-size: 1.1rem;
-            margin-right: 8px;
+        h2, h3, h4 {
+            color: $color-text;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
         }
-        &:hover{
-            color: $color-secondary;
-            i {
-                color: $color-secondary;
 
+        p {
+            max-width: 500px;
+            margin: 0 30px;
+            line-height: 28px;
+            font-size: 14px;
+        }
+
+        .socials {
+            list-style: none;
+            @include dFlex(row, nowrap, center, center);
+            margin: 3rem;
+            padding: 10px;
+            background-color: $color-gray-darker;
+            border-radius: 5px;
+
+            li:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-text;
+
+                i {
+                    font-size: 1.1rem;
+                    margin-right: 8px;
+                }
+
+                &:hover{
+                    color: $color-secondary;
+
+                    i {
+                        color: $color-secondary;
+        
+                    }
+                }
             }
         }
     }
-}
 
-/*Footer Inferior*/
-.footer-bottom {
-    background: $color-principal;
-    padding: 20px 0;
-    text-align: center;
-    p {
-        margin: 0 30px;
-        font-size: 14px;
-        word-spacing: 2px;
-    }
-    span {
-        text-transform: uppercase;
-        opacity: .7;
-        font-weight: $font-weight-normal;
+    //Footer INFERIOR
+    .footer-bottom {
+        background: $color-principal;
+        padding: 20px 0;
+        text-align: center;
+
+        p {
+            margin: 0 30px;
+            font-size: 14px;
+            word-spacing: 2px;
+        }
+
+        span {
+            text-transform: uppercase;
+            opacity: .7;
+            font-weight: $font-weight-normal;
+        }
     }
 }
 
@@ -81,27 +86,35 @@ footer {
 
 /*Dispositivos s (small)*/
 @media (max-width: calc((map-get($breakpoints,sm)) - 1px)) {
-    .socials {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 30px;
-        padding: 20px;
-        li {
-            &:not(:last-child) {
-                margin-right: 0;
+
+    footer {
+        .footer-content {
+            .socials {
+                @include dGrid(repeat(2,1fr), auto auto, 30px, 30px, stretch);
+                padding: 20px;
+
+                li {
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
+
+                    &:nth-child(5) {
+                        grid-column: span 2;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-text;
+
+                    i {
+                        display: block;
+                        margin-right: 0;
+                    }
+                }
+
             }
-            &:nth-child(5) {
-                grid-column: span 2;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: $color-text;
-            i {
-                display: block;
-                margin-right: 0;
-            }
+
         }
     }
 }
