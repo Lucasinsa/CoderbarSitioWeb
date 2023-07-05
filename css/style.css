@@ -415,7 +415,7 @@ footer .footer-bottom span {
 }
 /*Dispositivos <= 360px*/
 @media (max-width: 360px) {
-  #main__index .titulo {
+  #main__index .texto-encabezado .titulo {
     font-size: 25px;
   }
 }
