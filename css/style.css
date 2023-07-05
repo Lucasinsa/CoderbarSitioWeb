@@ -413,6 +413,12 @@ footer .footer-bottom span {
     font-size: 35px;
   }
 }
+/*Dispositivos <= 360px*/
+@media (max-width: 360px) {
+  #main__index .titulo {
+    font-size: 25px;
+  }
+}
 /* -------------------------------------------------*/
 /* Contenido NUESTRA HISTORIA (Dispositivos ≥992px) */
 /* -------------------------------------------------*/

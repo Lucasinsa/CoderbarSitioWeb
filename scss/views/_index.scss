@@ -43,3 +43,12 @@
         }
     }
 }
+
+/*Dispositivos <= 360px*/
+@media (max-width: map-get($breakpoints,personalizado)) {
+    #main__index {
+        .titulo {
+            font-size: 25px;
+        }
+    }
+}
