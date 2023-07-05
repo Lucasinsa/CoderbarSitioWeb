@@ -26,15 +26,15 @@
     <body>
         <!--Inicio de header + nav-->
         <header id="menu">
-            <nav class="navbar navbar-expand-lg fixed-top nav-background nav-height no-margin-padding">
+            <nav class="navbar navbar-expand-lg fixed-top nav-background nav-personalizado">
               <div class="container-fluid">
                 <a class="navbar-brand mx-4" href="../index.html">
                   <img src="../images/favicon.png" alt="Logo de Coderbar">
                 </a>
-                <button class="navbar-toggler borde-boton mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler mx-4 boton-personalizado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon imagen-barras"></span>
                 </button>
-                <div class="collapse margen-responsive-navbar navbar-collapse menu-color myp-personalizado" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse menu-nav-personalizado" id="navbarSupportedContent">
                   <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
                     <li class="nav-item">
                       <a class="nav-link" href="../index.html">INICIO</a>
@@ -55,7 +55,7 @@
                       <a class="nav-link" href="contacto.html">CONTACTO</a>
                     </li>
                   </ul>
-                  <div class="redes d-flex justify-content-center margen-responsive-redes">
+                  <div class="d-flex justify-content-center redes-personalizado">
                     <a href="https://instagram.com" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                   </div>
@@ -70,7 +70,7 @@
                 <h1>ESTAMOS UBICADOS EN ESTOS LUGARES</h1>
                 <section class="listaSucursales">
                     <ul>
-                        <li class="cardItem">
+                        <li class="card-item" data-aos="zoom-in">
                             <div class="zoom-foto">
                                 <img src=".././images/sucursal-1.jpg" alt="Sucursal 1">
                             </div>
@@ -99,7 +99,7 @@
                                 <a href="https://www.pedidosya.com.ar" target="_blank">PEDIDOS YA</a>
                             </div>
                         </li>
-                        <li class="cardItem">
+                        <li class="card-item" data-aos="zoom-in">
                             <div class="zoom-foto">
                                 <img src=".././images/sucursal-2.jpg" alt="Sucursal 2">
                             </div>
@@ -123,12 +123,12 @@
                                 </li>
                             </ul>
                             <p>(+7.065 reviews)</p>
-                            <p>Coorientes 2814, Boedo.</p>
+                            <p>Pavón 3831, Boedo.</p>
                             <div class="boton-card">
                                 <a href="https://www.pedidosya.com.ar" target="_blank">PEDIDOS YA</a>
                             </div>
                         </li>
-                        <li class="cardItem">
+                        <li class="card-item" data-aos="zoom-in">
                             <div class="zoom-foto">
                                 <img src=".././images/sucursal-3.jpg" alt="Sucursal 3">
                             </div>
@@ -157,7 +157,7 @@
                                 <a href="https://www.pedidosya.com.ar" target="_blank">PEDIDOS YA</a>
                             </div>
                         </li>
-                        <li class="cardItem">
+                        <li class="card-item" data-aos="zoom-in">
                             <div class="zoom-foto">
                                 <img src=".././images/sucursal-4.jpg" alt="Sucursal 4">
                             </div>
@@ -216,5 +216,8 @@
         <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
         <!--Script de Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!--Script de AOS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script> AOS.init();</script>    
     </body>
 </html>
