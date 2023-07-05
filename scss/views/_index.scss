@@ -1,0 +1,45 @@
+/* ------------------------------------------------*/
+/* Contenido INICIO (Dispositivos ≥992px y <992px) */
+/* ------------------------------------------------*/
+
+#main__index {
+    @include dFlex(column, nowrap, center, stretch);
+
+    .texto-encabezado {
+        @include dFlex(column, nowrap, center, stretch);
+        color: $color-text;
+        padding-top: 100px;
+        margin: 0 70px;
+
+        .icono {
+            font-size: 70px;
+            align-self: center;
+            animation: naranja-neon-icon 2s infinite alternate;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 50px;
+            color: $color-text;
+            animation: naranja-neon-title 2s infinite alternate;
+            span {
+                display: block;
+            }
+        }  
+    }
+}
+
+/* --------------------------------------------------*/
+/* Contenido INICIO (Dispositivos < 992px)           */
+/* --------------------------------------------------*/
+
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: calc((map-get($breakpoints,sm)) - 1px)) {
+    #main__index {
+        .texto-encabezado {
+            .titulo {
+                font-size: 35px;
+            }
+        }
+    }
+}

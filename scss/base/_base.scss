@@ -1,0 +1,41 @@
+/* --------------------------*/
+/* Reseteo y css general     */
+/* --------------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: $color-secondary $color-principal;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    color: $color-secondary;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i{
+    color: $color-text;
+}
+

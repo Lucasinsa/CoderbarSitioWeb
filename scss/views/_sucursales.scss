@@ -1,0 +1,24 @@
+/* -----------------------------------------------------*/
+/* Contenido SUCURSALES (Dispositivos ≥992px y <992px)  */
+/* -----------------------------------------------------*/ 
+
+//Título
+#main__sucursales {
+    h1 {
+        text-align: center;
+        color: $color-secondary;
+        margin: $margin-titles 50px;
+    }
+}
+
+//Lista de sucursales (Responsive por flex-wrap)
+.listaSucursales {
+    & > ul {
+        list-style: none;
+        padding: 0;
+        @include dFlex(row, wrap, center, stretch);
+        span {
+            display: block;
+        }
+    }
+}

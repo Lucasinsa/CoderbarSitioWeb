@@ -1,0 +1,13 @@
+/* -------------------------------------------- */
+/*Contenido (APLICABLE PARA TODAS LAS PÁGINAS)*/
+/* -------------------------------------------- */
+
+//Contenido comienza desde los 72px
+.content {
+    margin-top: 72px;
+    min-height: calc(100vh - 72px);
+    @include dFlex(row, nowrap, center, stretch);
+    background: url("../images/fondo.jpg") fixed center/cover;
+    box-shadow: inset 0 0 50px 50px rgba(0,0,0,8);
+    padding-bottom: 100px;
+}

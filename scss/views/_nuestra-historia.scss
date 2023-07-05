@@ -1,0 +1,116 @@
+/* -------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos ≥992px) */
+/* -------------------------------------------------*/
+
+.titulo-historia {
+    margin: $margin-titles 0 40px 0;
+    text-align: center;
+}
+
+.contenedor-p-carousel {
+    padding: 25px;
+    background-color: $color-principal;
+    @include borde($color-secondary);
+    border-radius: 5px;
+
+    .contenedor-flex-p-carousel {
+        @include dFlex(row, nowrap, space-around, stretch);
+
+        p {
+            @extend %gradient-naranja;
+            padding: 20px;
+            width: 426px;
+            margin-bottom: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+        }
+
+
+        .medida-carousel {
+            width: 400px;
+            height: 400px;
+
+            .borde-carousel {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                img {
+                    width: 400px;
+                    height: 400px;
+                    object-fit: cover;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------*/
+/* Contenido NUESTRA HISTORIA (Dispositivos < 992px) */
+/* --------------------------------------------------*/
+
+/*Dispositivos s y md (Small y Medium)*/
+@media (min-width: map-get($breakpoints,sm)) and (max-width: calc((map-get($breakpoints,lg)) - 1px)) {
+    .contenedor-p-carousel {
+        .contenedor-flex-p-carousel {
+            flex-direction: column;
+
+            p {
+                max-width: 500px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .medida-carousel {
+                width: 426px;
+                height: 300px;
+        
+                .borde-carousel {
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 5px;
+        
+                    img {
+                        width: 426px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Dispositivos xs (extrasmall)*/
+@media (max-width: calc((map-get($breakpoints,sm)) - 1px)) {
+    .contenedor-p-carousel {
+        .contenedor-flex-p-carousel {
+            flex-direction: column;
+
+            p {
+                max-width: 300px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+    
+            .medida-carousel {
+                width: 300px;
+                height: 250px;
+        
+                .borde-carousel {
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 5px;
+        
+                    img {
+                        width: 300px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+}

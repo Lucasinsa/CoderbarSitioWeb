@@ -1,0 +1,32 @@
+//Carpeta ABSTRACT
+@import "./abstract/variables";
+@import "./abstract/maps";
+@import "./abstract/mixins";
+@import "./abstract/extends";
+
+//Carpeta BASE
+@import "./base/animations";
+@import "./base/base";
+@import "./base/scrollbar";
+
+//Carpeta COMPONENTS
+@import "./components/card";
+@import "./components/zoom-fotos";
+
+//Carpeta LAYOUTS
+@import "./layouts/header-nav";
+@import "./layouts/content";
+@import "./layouts/footer";
+
+//Carpeta VIEWS
+@import "./views/index";
+@import "./views/nuestra-historia";
+@import "./views/comidas";
+@import "./views/sucursales";
+@import "./views/shows";
+@import "./views/contacto";
+
+
+
+
+

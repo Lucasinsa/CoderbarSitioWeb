@@ -1,0 +1,120 @@
+/* ---------------------------------------*/
+/* Contenido COMIDAS (Dispositivos ≥992px)*/
+/* ---------------------------------------*/
+
+//Título y presentación
+.presentacion-comidas {
+    h1 {
+        text-align: center;
+        margin: $margin-titles;
+    }
+
+    p {
+        text-align: center;
+        margin: 40px;
+        padding: 25px;
+        background-color: $color-principal;
+        @include borde($color-secondary);
+        border-radius: 5px;
+    }
+}
+
+//Menú de comidas
+.menu-comidas {
+    margin: 0 40px;
+
+    .popular-list {
+        @include dGrid(repeat(3,1fr), none, 30px, 30px, stretch);
+        margin: 0;
+        padding: 0;
+
+        .popular-card {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            height: 330px;
+
+            .card-img {
+                height: 100%;
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .card-content {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                background: $color-text;
+                border-radius: 25px;
+                padding: 20px;
+
+                .card-rating {
+                    background: $color-secondary;
+                    color: $color-text;
+                    position: absolute;
+                    top: 0;
+                    right: auto;
+                    @include dFlex(row, nowrap, flex-start, center);
+                    gap: 1px;
+                    transform: translateY(-50%);
+                    padding: 6px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                }
+
+                p {
+                    color: $color-principal;
+                    margin: 0;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+    }
+
+    .boton-menu {
+        margin-top: $margin-titles;
+        @include dFlex(row, nowrap, center, stretch);
+
+        a {
+            margin-top: 10px;
+            background-color: $color-principal;
+            color: $color-text;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            &:hover{
+                @extend %gradient-naranja;
+            }
+        }
+    }
+}
+
+/* --------------------------------------*/
+/* Contenido COMIDAS (Dispositivos < 992px)*/
+/* --------------------------------------*/
+
+/*Dispositivos md (Medium)*/
+@media (min-width: map-get($breakpoints,md)) and (max-width: calc((map-get($breakpoints,lg)) - 1px)) {
+    .menu-comidas {
+        .popular-list {
+            grid-template-columns: 1fr 1fr;
+
+            .last-popular-list {
+                grid-column: span 2;
+            }
+        }
+    }
+}
+
+/*Dispositivos xs y s (extra small y small)*/
+@media (max-width: calc((map-get($breakpoints,md)) - 1px)) {
+    .menu-comidas {
+        .popular-list {
+            grid-template-columns: 1fr;
+        }
+    }
+}
