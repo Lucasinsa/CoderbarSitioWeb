@@ -113,7 +113,7 @@
 }
 
 /*Dispositivos s (small) hasta 361px*/
-@media (min-width: (map-get($breakpoints,personalizado)) + 1px) and (max-width: calc((map-get($breakpoints,md)) - 1px)) {
+@media (min-width: calc((map-get($breakpoints,personalizado)) + 1px)) and (max-width: calc((map-get($breakpoints,md)) - 1px)) {
     .menu-comidas {
         .popular-list {
             grid-template-columns: 1fr;
