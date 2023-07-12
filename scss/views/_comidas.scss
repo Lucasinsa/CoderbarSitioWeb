@@ -95,9 +95,9 @@
     }
 }
 
-/* --------------------------------------*/
+/* ----------------------------------------*/
 /* Contenido COMIDAS (Dispositivos < 992px)*/
-/* --------------------------------------*/
+/* ----------------------------------------*/
 
 /*Dispositivos md (Medium)*/
 @media (min-width: map-get($breakpoints,md)) and (max-width: calc((map-get($breakpoints,lg)) - 1px)) {

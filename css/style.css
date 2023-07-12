@@ -651,9 +651,9 @@ footer .footer-bottom span {
   text-decoration: none;
   text-align: center;
 }
-/* --------------------------------------*/
+/* ----------------------------------------*/
 /* Contenido COMIDAS (Dispositivos < 992px)*/
-/* --------------------------------------*/
+/* ----------------------------------------*/
 /*Dispositivos md (Medium)*/
 @media (min-width: 768px) and (max-width: 991px) {
   .menu-comidas .popular-list {
