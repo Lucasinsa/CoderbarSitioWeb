@@ -663,14 +663,14 @@ footer .footer-bottom span {
     grid-column: span 2;
   }
 }
-/*Dispositivos s (small)*/
-@media (min-width: 360px) and (max-width: 767px) {
+/*Dispositivos s (small) hasta 361px*/
+@media (min-width: 361px) and (max-width: 767px) {
   .menu-comidas .popular-list {
     grid-template-columns: 1fr;
   }
 }
-/*Dispositivos xs (extra small)*/
-@media (max-width: 359px) {
+/*Dispositivos xs (extra small) desde 360px*/
+@media (max-width: 360px) {
   .menu-comidas .popular-list {
     grid-template-columns: 1fr;
   }

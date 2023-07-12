@@ -112,8 +112,8 @@
     }
 }
 
-/*Dispositivos s (small)*/
-@media (min-width: map-get($breakpoints,personalizado)) and (max-width: calc((map-get($breakpoints,md)) - 1px)) {
+/*Dispositivos s (small) hasta 361px*/
+@media (min-width: (map-get($breakpoints,personalizado)) + 1px) and (max-width: calc((map-get($breakpoints,md)) - 1px)) {
     .menu-comidas {
         .popular-list {
             grid-template-columns: 1fr;
@@ -121,8 +121,8 @@
     }
 }
 
-/*Dispositivos xs (extra small)*/
-@media (max-width: calc((map-get($breakpoints,personalizado)) - 1px)) {
+/*Dispositivos xs (extra small) desde 360px*/
+@media (max-width: calc(map-get($breakpoints,personalizado))) {
     .menu-comidas {
         .popular-list {
             grid-template-columns: 1fr;
