@@ -183,12 +183,12 @@ i {
   background-color: black;
   height: 72px;
 }
-.nav-personalizado .navbar-brand img {
+.nav-personalizado .brand-personalizado img {
   width: 50px;
   height: 56px;
   transition: all 0.5s;
 }
-.nav-personalizado .navbar-brand img:hover {
+.nav-personalizado .brand-personalizado img:hover {
   transform: rotate(360deg);
 }
 .nav-personalizado .menu-nav-personalizado {
@@ -198,10 +198,10 @@ i {
   color: orangered;
   text-decoration: underline;
 }
-.nav-personalizado .menu-nav-personalizado .nav-item .nav-link {
+.nav-personalizado .menu-nav-personalizado .item-personalizado .link-personalizado {
   color: white;
 }
-.nav-personalizado .menu-nav-personalizado .nav-item .nav-link:hover {
+.nav-personalizado .menu-nav-personalizado .item-personalizado .link-personalizado:hover {
   color: orangered;
 }
 .nav-personalizado .menu-nav-personalizado .redes-personalizado .instagram {
@@ -242,7 +242,7 @@ i {
     color: black;
     text-decoration: none;
   }
-  .nav-personalizado .menu-nav-personalizado .nav-item .nav-link:hover {
+  .nav-personalizado .menu-nav-personalizado .item-personalizado .link-personalizado:hover {
     color: black;
   }
   .nav-personalizado .redes-personalizado {
