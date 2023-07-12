@@ -22,6 +22,9 @@
 //Menú de comidas
 .menu-comidas {
     margin: 0 40px;
+    background-color: $color-text;
+    padding: 24px;
+    border-radius: 25px;
 
     .popular-list {
         @include dGrid(repeat(3,1fr), none, 30px, 30px, stretch);
@@ -76,16 +79,15 @@
     }
 
     .boton-menu {
-        margin-top: $margin-titles;
-        @include dFlex(row, nowrap, center, stretch);
-
         a {
-            margin-top: 10px;
+            margin-top: 25px;
+            @include dFlex(row, nowrap, center, stretch);
+            border-radius: 25px;
+            padding: 20px 0;
             background-color: $color-principal;
             color: $color-text;
-            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            text-align: center;
             &:hover{
                 @extend %gradient-naranja;
             }
@@ -110,11 +112,28 @@
     }
 }
 
-/*Dispositivos xs y s (extra small y small)*/
-@media (max-width: calc((map-get($breakpoints,md)) - 1px)) {
+/*Dispositivos s (small)*/
+@media (min-width: map-get($breakpoints,personalizado)) and (max-width: calc((map-get($breakpoints,md)) - 1px)) {
     .menu-comidas {
         .popular-list {
             grid-template-columns: 1fr;
         }
     }
 }
+
+/*Dispositivos xs (extra small)*/
+@media (max-width: calc((map-get($breakpoints,personalizado)) - 1px)) {
+    .menu-comidas {
+        .popular-list {
+            grid-template-columns: 1fr;
+
+            .popular-card {
+                .card-content {
+                    left: 20px;
+                    right: 7px;
+                }
+            }
+        }
+    }
+}
+

@@ -22,3 +22,16 @@
         }
     }
 }
+
+/* --------------------------------------------*/
+/* Contenido SUCURSALES (Dispositivos > 1400px)*/
+/* --------------------------------------------*/
+
+@media (min-width: map-get($breakpoints,xxl)) {
+    .listaSucursales {
+        & > ul {
+            @include dGrid(1fr 1fr 1fr 1fr, auto auto, 0, 0, center);
+        }
+    }
+
+}

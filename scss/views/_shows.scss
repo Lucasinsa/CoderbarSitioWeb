@@ -17,7 +17,7 @@
             background-color: $color-principal;
             @include borde($color-secondary);
             border-radius: 5px;
-            margin: 0 20px;
+            margin: 0 70px;
         }
     }
 
@@ -48,6 +48,11 @@
 /*Dispositivos xs y s (extra small y small)*/
 @media (max-width: calc((map-get($breakpoints,md)) - 1px)) {
     #main__shows {
+        .presentacion-shows {
+            p {
+                margin: 0 20px;
+            }
+        }
         .lista-shows {
             @include dFlex(column, nowrap, flex-start, center);
         }

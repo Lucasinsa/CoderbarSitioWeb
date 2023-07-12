@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* ------------------------------*/
+/* Gradiente naranja             */
+/* ------------------------------*/
 #main__contacto a button:hover, #main__contacto form input[type=submit]:hover, .menu-comidas .boton-menu a:hover, .contenedor-p-carousel .contenedor-flex-p-carousel p, .card-item a:hover {
   background: #fcb045;
   background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d);
@@ -262,7 +265,7 @@ i {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
-  background: url("../images/fondo.jpg") fixed center/cover;
+  background: url("../images/fondo.webp") fixed center/cover;
   box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
   padding-bottom: 100px;
 }
@@ -490,6 +493,7 @@ footer .footer-bottom span {
   .contenedor-p-carousel .contenedor-flex-p-carousel .medida-carousel .borde-carousel img {
     width: 426px;
     height: 300px;
+    border-top-right-radius: 0;
   }
 }
 /*Dispositivos xs (extrasmall)*/
@@ -515,6 +519,7 @@ footer .footer-bottom span {
   .contenedor-p-carousel .contenedor-flex-p-carousel .medida-carousel .borde-carousel img {
     width: 300px;
     height: 250px;
+    border-top-right-radius: 0;
   }
 }
 /*Dispositivos <= 360px*/
@@ -553,6 +558,7 @@ footer .footer-bottom span {
   .contenedor-p-carousel .contenedor-flex-p-carousel .medida-carousel .borde-carousel img {
     width: 300px;
     height: 250px;
+    border-top-right-radius: 0;
   }
 }
 /* ---------------------------------------*/
@@ -573,6 +579,9 @@ footer .footer-bottom span {
 
 .menu-comidas {
   margin: 0 40px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 25px;
 }
 .menu-comidas .popular-list {
   display: grid;
@@ -628,21 +637,19 @@ footer .footer-bottom span {
   margin: 0;
   font-weight: 700;
 }
-.menu-comidas .boton-menu {
-  margin-top: 40px;
+.menu-comidas .boton-menu a {
+  margin-top: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
-}
-.menu-comidas .boton-menu a {
-  margin-top: 10px;
+  border-radius: 25px;
+  padding: 20px 0;
   background-color: black;
   color: white;
-  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  text-align: center;
 }
 /* --------------------------------------*/
 /* Contenido COMIDAS (Dispositivos < 992px)*/
@@ -656,10 +663,20 @@ footer .footer-bottom span {
     grid-column: span 2;
   }
 }
-/*Dispositivos xs y s (extra small y small)*/
-@media (max-width: 767px) {
+/*Dispositivos s (small)*/
+@media (min-width: 360px) and (max-width: 767px) {
   .menu-comidas .popular-list {
     grid-template-columns: 1fr;
+  }
+}
+/*Dispositivos xs (extra small)*/
+@media (max-width: 359px) {
+  .menu-comidas .popular-list {
+    grid-template-columns: 1fr;
+  }
+  .menu-comidas .popular-list .popular-card .card-content {
+    left: 20px;
+    right: 7px;
   }
 }
 /* -----------------------------------------------------*/
@@ -684,6 +701,19 @@ footer .footer-bottom span {
   display: block;
 }
 
+/* --------------------------------------------*/
+/* Contenido SUCURSALES (Dispositivos > 1400px)*/
+/* --------------------------------------------*/
+@media (min-width: 1400px) {
+  .listaSucursales > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 0;
+    column-gap: 0;
+    justify-items: center;
+  }
+}
 /* -------------------------------------*/
 /* Contenido SHOWS (Dispositivos ≥992px)*/
 /* -------------------------------------*/
@@ -701,7 +731,7 @@ footer .footer-bottom span {
   background-color: black;
   border: 1px solid orangered;
   border-radius: 5px;
-  margin: 0 20px;
+  margin: 0 70px;
 }
 #main__shows .lista-shows {
   display: grid;
@@ -727,6 +757,9 @@ footer .footer-bottom span {
 }
 /*Dispositivos xs y s (extra small y small)*/
 @media (max-width: 767px) {
+  #main__shows .presentacion-shows p {
+    margin: 0 20px;
+  }
   #main__shows .lista-shows {
     display: flex;
     flex-direction: column;
@@ -772,6 +805,7 @@ footer .footer-bottom span {
   outline: none;
   color: #666;
   font-weight: 700;
+  resize: none;
 }
 #main__contacto form input[type=submit] {
   background-color: black;
