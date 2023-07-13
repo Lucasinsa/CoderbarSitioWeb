@@ -20,84 +20,86 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <!--Enlace con CSS-->
         <link href=".././css/style.css" rel="stylesheet">
+        <!--Enlace con AOS-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <!--Inicio de header + nav-->
         <header id="menu">
             <nav class="navbar navbar-expand-lg fixed-top nav-personalizado">
-              <div class="container-fluid">
-                <a class="navbar-brand mx-4 brand-personalizado" href="../index.html">
-                  <img src=".././images/logo.webp" alt="Logo de Coderbar">
-                </a>
-                <button class="navbar-toggler mx-4 boton-personalizado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon imagen-barras"></span>
-                </button>
-                <div class="collapse navbar-collapse menu-nav-personalizado" id="navbarSupportedContent">
-                  <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" href="../index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" id="pagina-actual" href="nuestra-historia.html">NUESTRA HISTORIA</a>
-                    </li>
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" href="comidas.html">COMIDAS</a>
-                    </li>
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" href="sucursales.html">SUCURSALES</a>
-                    </li>
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" href="shows.html">SHOWS</a>
-                    </li>
-                    <li class="nav-item item-personalizado">
-                      <a class="nav-link link-personalizado" href="contacto.html">CONTACTO</a>
-                    </li>
-                  </ul>
-                  <div class="d-flex justify-content-center redes-personalizado">
-                    <a href="https://instagram.com" class="instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" class="twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                  </div>
+                <div class="container-fluid">
+                    <a class="navbar-brand mx-4 brand-personalizado" href="../index.html">
+                        <img src=".././images/logo.webp" alt="Logo de Coderbar">       
+                    </a>
+                    <button class="navbar-toggler mx-4 boton-personalizado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon imagen-barras"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-nav-personalizado" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="../index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" id="pagina-actual" href="nuestra-historia.html">NUESTRA HISTORIA</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="comidas.html">COMIDAS</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="sucursales.html">SUCURSALES</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="shows.html">SHOWS</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center redes-personalizado">
+                            <a href="https://instagram.com" class="instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com" class="twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </nav>
         </header>
         <!--Cierre de header + nav-->
         <!--Inicio del contenido principal de la página-->
         <div class="content">
-          <main id="main__nuestra-historia">
-            <div class="titulo-historia">
-              <h1>NUESTRA HISTORIA</h1>
-            </div>
-            <div class="contenedor-p-carousel">
-              <div class="contenedor-flex-p-carousel">
-                <p>
-                  Nacimos en el 2010 en Almagro, provenientes de una extensa tradición gastronómica familiar. En un comienzo, nos avocamos a comida casera y café de alta gama; construyendo nuestro propio ADN. En ese camino, nos obsesionamos con los tragos perfectos, y haciendo pruebas, lentamente empezamos a testear los productos.
-                  El impacto de la gente fue inmediato. Fascinados con la experiencia, se lanzaron a recomendar nuestras comidas y bebidas de boca a boca. Ese enorme fervor y entusiasmo que la propia presión de los clientes transformó, hizo de Coderbar un centro de culto para los fanáticos de la combinación ambiente-menú.
-                </p>
-                <!--Inicio del carrousel de imagenes-->
-                <div id="carouselExampleSlidesOnly" class="carousel medida-carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner borde-carousel">
-                    <div class="carousel-item active" data-bs-interval="500">
-                      <img src=".././images/nuestra-historia-1.webp" class="d-block w-100" alt="Foto del lugar (1)">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="500">
-                      <img src=".././images/nuestra-historia-2.webp" class="d-block w-100" alt="Foto del lugar (2)">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="500">
-                      <img src=".././images/nuestra-historia-3.webp" class="d-block w-100" alt="Foto del lugar (3)">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="500">
-                      <img src=".././images/nuestra-historia-4.webp" class="d-block w-100" alt="Foto del lugar (4)">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="500">
-                      <img src=".././images/nuestra-historia-5.webp" class="d-block w-100" alt="Foto del lugar (5)">
-                    </div>
-                  </div>
+            <main id="main__nuestra-historia">
+                <div class="titulo-historia">
+                    <h1>NUESTRA HISTORIA</h1>
                 </div>
-                <!--Fin del carrousel de imagenes-->
-              </div>
-            </div>
-          </main>
+                <div class="contenedor-p-carousel" data-aos="zoom-in">
+                    <div class="contenedor-flex-p-carousel">
+                        <p>
+                            Nacimos en el 2010 en Almagro, provenientes de una extensa tradición gastronómica familiar. En un comienzo, nos avocamos a comida casera y café de alta gama; construyendo nuestro propio ADN. En ese camino, nos obsesionamos con los tragos perfectos, y haciendo pruebas, lentamente empezamos a testear los productos.
+                            El impacto de la gente fue inmediato. Fascinados con la experiencia, se lanzaron a recomendar nuestras comidas y bebidas de boca a boca. Ese enorme fervor y entusiasmo que la propia presión de los clientes transformó, hizo de Coderbar un centro de culto para los fanáticos de la combinación ambiente-menú.
+                        </p>
+                        <!--Inicio del carrousel de imagenes-->
+                        <div id="carouselExampleSlidesOnly" class="carousel medida-carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner borde-carousel">
+                                <div class="carousel-item active" data-bs-interval="500">
+                                    <img src=".././images/nuestra-historia-1.webp" class="d-block w-100" alt="Foto del lugar (1)">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="500">
+                                    <img src=".././images/nuestra-historia-2.webp" class="d-block w-100" alt="Foto del lugar (2)">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="500">
+                                    <img src=".././images/nuestra-historia-3.webp" class="d-block w-100" alt="Foto del lugar (3)">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="500">
+                                    <img src=".././images/nuestra-historia-4.webp" class="d-block w-100" alt="Foto del lugar (4)">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="500">
+                                    <img src=".././images/nuestra-historia-5.webp" class="d-block w-100" alt="Foto del lugar (5)">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin del carrousel de imagenes-->
+                    </div>
+                </div>
+            </main>
         </div>
         <!--Cierre del contenido principal de la página-->
         <!--Inicio del Footer-->
@@ -109,10 +111,10 @@
                     Contamos con una barra de tragos especiales y únicos.
                 </p>
                 <ul class="socials">
-                  <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
-                  <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
-                  <li><a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i>Youtube</a></li>
-                  <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i>Youtube</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
@@ -124,6 +126,8 @@
         <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
         <!--Script de Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!--Script de AOS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script> AOS.init();</script>  
     </body>
 </html>
-
