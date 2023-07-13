@@ -8,7 +8,7 @@
     height: 72px;
 
     //Logo
-    .navbar-brand {
+    .brand-personalizado {
         img {
             width: 50px;
             height: 56px;
@@ -29,8 +29,8 @@
             text-decoration: underline;
         }
 
-        .nav-item {
-            .nav-link {
+        .item-personalizado {
+            .link-personalizado {
                 color: $color-text;
         
                 &:hover {
@@ -95,8 +95,8 @@
                 text-decoration: none;
             }
 
-            .nav-item {
-                .nav-link:hover {
+            .item-personalizado {
+                .link-personalizado:hover {
                     color: $color-principal;
                 }
             }

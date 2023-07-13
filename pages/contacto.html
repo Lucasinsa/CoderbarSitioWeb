@@ -19,63 +19,65 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <!--Enlace con CSS-->
         <link href=".././css/style.css" rel="stylesheet">
+        <!--Enlace con AOS-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <!--Inicio de header + nav-->
         <header id="menu">
             <nav class="navbar navbar-expand-lg fixed-top nav-personalizado">
-              <div class="container-fluid">
-                <a class="navbar-brand mx-4" href="../index.html">
-                  <img src="../images/favicon.png" alt="Logo de Coderbar">
-                </a>
-                <button class="navbar-toggler mx-4 boton-personalizado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon imagen-barras"></span>
-                </button>
-                <div class="collapse navbar-collapse menu-nav-personalizado" id="navbarSupportedContent">
-                  <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="nuestra-historia.html">NUESTRA HISTORIA</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="comidas.html">COMIDAS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="sucursales.html">SUCURSALES</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="shows.html">SHOWS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="pagina-actual" href="contacto.html">CONTACTO</a>
-                    </li>
-                  </ul>
-                  <div class="d-flex justify-content-center redes-personalizado">
-                    <a href="https://instagram.com" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                  </div>
+                <div class="container-fluid">
+                    <a class="navbar-brand mx-4 brand-personalizado" href="../index.html">
+                        <img src="../images/logo.webp" alt="Logo de Coderbar">
+                    </a>
+                    <button class="navbar-toggler mx-4 boton-personalizado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon imagen-barras"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-nav-personalizado" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-7 mb-lg-0 mb-xl-0 mb-xxl-0 align-items-center">
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="../index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="nuestra-historia.html">NUESTRA HISTORIA</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="comidas.html">COMIDAS</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="sucursales.html">SUCURSALES</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" href="shows.html">SHOWS</a>
+                            </li>
+                            <li class="nav-item item-personalizado">
+                                <a class="nav-link link-personalizado" id="pagina-actual" href="contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center redes-personalizado">
+                            <a href="https://instagram.com" class="instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com" class="twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </nav>
         </header>
         <!--Cierre de header + nav-->
         <!--Inicio del contenido principal de la página-->
         <div class="content">
-            <main id="main__contacto">
+            <main id="main__contacto" data-aos="zoom-in">
                 <section>
                     <h2>CONTACTÁTE</h2>
                     <p>
                         Ante cualquier duda que tengas podés escribirnos, llenando este formulario.
                     </p>
-                    <form>
+                    <form method="post">
                         <input type="text" name="nombre" placeholder="NOMBRE" required>
                         <input type="email" name="email" placeholder="CORREO ELECTRÓNICO" required>
                         <input type="number" name="telefono" placeholder="TELEFONO" required>
                         <textarea name="mensaje" placeholder="MENSAJE" required></textarea>
                         <input type="submit" value="ENVIAR">
-                    </form>
+                    </form> 
                 </section>
                 <hr>
                 <section>
@@ -98,10 +100,10 @@
                     Contamos con una barra de tragos especiales y únicos.
                 </p>
                 <ul class="socials">
-                  <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
-                  <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
-                  <li><a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i>Youtube</a></li>
-                  <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    <li><a href="https://youtube.com" target="_blank"><i class="fa fa-youtube"></i>Youtube</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a></li>
                 </ul>
             </div>
             <div class="footer-bottom">
@@ -113,6 +115,8 @@
         <script src="https://kit.fontawesome.com/c99dafd52c.js" crossorigin="anonymous"></script>
         <!--Script de Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!--Script de AOS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script> AOS.init();</script>  
     </body>
 </html>
-
