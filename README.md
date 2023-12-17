@@ -2,7 +2,7 @@
 Project carried out as part of the Web Development course at Coderhouse.
 
 ## What is it about?
-This is a static website for a bar. The user will be able to find out about all the branches, consult shows, see the menu and even contact the company via email.
+This is a static website for a bar. The user will be able to find out about all the branches, consult shows, see the menu and even contact the company via email. The website has a responsive design.
 
 ## Website navegation
 The following GIF shows the different possible routes of the site:
