@@ -7,7 +7,7 @@ This is a static website for a bar. The user will be able to find out about all 
 ## Website navegation
 The following GIF shows the different possible routes of the site:
 
-![Gif Funcionamiento](./images/funcionamiento-coderbar.gif)
+![Gif Funcionamiento](./images/funcionamiento-gif-coderbar.gif)
 
 - **Logo:** Directs to index.html.
 - **Inicio:** Directs to index.html.
